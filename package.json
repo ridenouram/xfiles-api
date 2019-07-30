@@ -1,0 +1,31 @@
+{
+  "name": "xfiles-postgreSQL",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ridenouram/xfiles-postgreSQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ridenouram/xfiles-postgreSQL/issues"
+  },
+  "homepage": "https://github.com/ridenouram/xfiles-postgreSQL#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-html-parser": "^1.1.16",
+    "superagent": "^5.1.0",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1"
+  }
+}
