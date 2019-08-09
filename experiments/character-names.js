@@ -1,13 +1,19 @@
 const request = require('superagent');
 const { parse } = require('node-html-parser');
 
+//800 characters, multiple pages that list all characters - promise all for all queries and then combine arrays
+
 const scrape = () => {
-  return request.get(`https://x-files.fandom.com/wiki/Category:Monster_of_the_Week#`)
+  return request.get(`https://x-files.fandom.com/wiki/Category:TXF_characters`)
     .then(res => res.text)
     .then(parse)
     .then(findCharLink)
     .then(findCharNames)
-    .then(names => console.log(names));
+    .then(names => names.filter(function (str) {
+        return !str.includes('File:')
+      })
+    )
+    .then(filteredNames => console.log(filteredNames));
 };
 
 const findCharLink = html => html.querySelectorAll('.category-page__member-link');
