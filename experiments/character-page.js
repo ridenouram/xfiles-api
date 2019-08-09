@@ -47,4 +47,14 @@ const scrapeCategories = () => {
     .then(categories => console.log(categories));
 }
 
-scrapeCategories();
+//appearances
+const scrapeAppearances = () => {
+  return request.get(`https://x-files.fandom.com/wiki/Eugene_Victor_Tooms`)
+        .then(res => res.text)
+        .then(parse)
+        .then(html => html.querySelector('.mw-redirect'))
+        .then(child => child.parentNode)
+        .then(data => console.log(data));
+}
+
+scrapeAppearances();
