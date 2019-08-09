@@ -35,4 +35,16 @@ const scrapeDesc = () => {
         .then(data => console.log(data.structuredText));
 }
 
-scrape();
+//gets a list of categories
+const scrapeCategories = () => {
+  return request.get('https://x-files.fandom.com/wiki/Eugene_Victor_Tooms')
+    .then(res => res.text)
+    .then(parse)
+    .then(html => html.querySelector('div .container'))
+    .then(div => div.querySelector('ul'))
+    .then(ul => ul.querySelectorAll('li'))
+    .then(values => values.map(value => value.structuredText))
+    .then(categories => console.log(categories));
+}
+
+scrapeCategories();
