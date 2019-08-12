@@ -1,17 +1,13 @@
 const request = require('superagent');
 const { parse } = require('node-html-parser');
 
-const scrape = () => {
+
+//gets picture URL
+const scrapePicture = () => {
   return request.get(`https://x-files.fandom.com/wiki/Eugene_Victor_Tooms`)
         .then(res => res.text)
         .then(parse)
-        .then(html => {
-          const labels = html.querySelectorAll('.pi-data-label').map(l => l.structuredText);
-          const values = html.querySelectorAll('div .pi-data-value');
-          const photoInfo = html.querySelectorAll('.pi-image-thumbnail').length ? html.querySelectorAll('.pi-image-thumbnail')[0].rawAttrs.split('"')[1] : 'https://pbs.twimg.com/profile_images/514121481702227968/XxIE7ASP_400x400.jpeg';
-          //https://vignette.wikia.nocookie.net/x-files/images/0/0b/Eugene_Victor_Tooms.jpg/revision/latest/scale-to-width-down/310?cb=20080221052611   remove the part after .jpg to get rid of resizing
-          return { labels, values, photoInfo };
-        })
+        .then(html => html.querySelectorAll('.pi-image-thumbnail').length ? html.querySelectorAll('.pi-image-thumbnail')[0].rawAttrs.split('"')[1] : 'https://three-ninjas.co.uk/wp-content/uploads/2016/02/x-files.gif?w=640')
         .then(data => console.log(data));
 };
 
@@ -24,6 +20,16 @@ const scrapeChartValues = () => {
         .then(values => values.map(value => value.structuredText))
         .then(data => console.log(data));
 }
+
+//gets labels from character info chart, puts into array
+const scrapeChartLabels = () => {
+  return request.get('https://x-files.fandom.com/wiki/Eugene_Victor_Tooms')
+    .then(res => res.text)
+    .then(parse)
+    .then(html => html.querySelectorAll('.pi-data-label'))
+    .then(labels => labels.map(label => label.structuredText))
+    .then(data => console.log(data));
+  }
 
 
 //gets first description paragraph
@@ -47,14 +53,14 @@ const scrapeCategories = () => {
     .then(categories => console.log(categories));
 }
 
-//appearances
-const scrapeAppearances = () => {
-  return request.get(`https://x-files.fandom.com/wiki/Eugene_Victor_Tooms`)
-        .then(res => res.text)
-        .then(parse)
-        .then(html => html.querySelector('.mw-redirect'))
-        .then(child => child.parentNode)
-        .then(data => console.log(data));
-}
+// //appearances
+// const scrapeAppearances = () => {
+//   return request.get(`https://x-files.fandom.com/wiki/Eugene_Victor_Tooms`)
+//         .then(res => res.text)
+//         .then(parse)
+//         .then(html => html.querySelector('.mw-redirect').parentNode)
+//         // .then(parent => parent.querySelectorAll('a').innerHtml)
+//         .then(data => console.log(data));
+// }
 
-scrapeAppearances();
+scrapePicture();
