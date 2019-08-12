@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/ridenouram/xfiles-postgreSQL#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
     "express": "^4.17.1",
     "node-html-parser": "^1.1.16",
+    "pg": "^7.12.1",
     "superagent": "^5.1.0",
     "supertest": "^4.0.2"
   },
