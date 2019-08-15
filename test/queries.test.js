@@ -12,6 +12,15 @@ describe('routes', () => {
       });
   });
 
+  it('gets character by id', () => {
+    pool.connect();
+    return request(app)
+      .get('/characters/207')
+      .then(res => {
+        expect(res.body).toHaveLength(1);
+      });
+  });
+
   it('gets characters by category', () => {
     pool.connect();
     return request(app)
