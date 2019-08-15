@@ -11,4 +11,13 @@ describe('routes', () => {
         expect(res.body).toHaveLength(465);
       });
   });
+
+  it('gets characters by category', () => {
+    pool.connect();
+    return request(app)
+      .get('/category/Criminals')
+      .then(res => {
+        expect(res.body).toHaveLength(70);
+      });
+  });
 });
