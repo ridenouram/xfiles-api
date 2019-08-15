@@ -30,6 +30,10 @@
     "superagent": "^5.1.0",
     "supertest": "^4.0.2"
   },
+  "engines": {
+    "node": "12.2.0",
+    "npm": "6.9.0"
+  },
   "devDependencies": {
     "eslint": "^6.1.0",
     "jest": "^24.8.0",
