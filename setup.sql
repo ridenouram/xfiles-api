@@ -1,11 +1,11 @@
-CREATE TABLE character (
+CREATE TABLE CHARACTER (
   id SERIAL UNIQUE,
-  name TEXT,
+  name TEXT UNIQUE,
   gender TEXT,
   status TEXT,
   born TEXT, 
   occupation TEXT,
-  rank TEXT,
+  RANK TEXT,
   affiliations TEXT,
   portrayedBy TEXT,
   image TEXT,
@@ -13,3 +13,4 @@ CREATE TABLE character (
   categories TEXT[],
   PRIMARY KEY (id)
 );
+
