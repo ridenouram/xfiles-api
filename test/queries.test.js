@@ -12,7 +12,16 @@ describe('routes', () => {
     return request(app)
       .get('/api/v1/characters')
       .then(res => {
-        expect(res.body).toHaveLength(465);
+        expect(res.body).toHaveLength(20);
+      });
+  });
+
+  it('gets all characters with variable limit', () => {
+    pool.connect();
+    return request(app)
+      .get('/api/v1/characters?perPage=30')
+      .then(res => {
+        expect(res.body).toHaveLength(30);
       });
   });
 
@@ -30,7 +39,17 @@ describe('routes', () => {
     return request(app)
       .get('/api/v1/characters?category=Criminals')
       .then(res => {
-        expect(res.body).toHaveLength(70);
+        expect(res.body).toHaveLength(20);
+      });
+  });
+
+  it('gets all characters with variable limit, page, and category', () => {
+    pool.connect();
+    return request(app)
+      .get('/api/v1/characters?category=Criminals&page=2&perPage=5')
+      .then(res => {
+        expect(res.body).toHaveLength(5);
+        expect(res.body[0].id).toEqual(261);
       });
   });
 });
