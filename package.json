@@ -8,7 +8,10 @@
     "test:watch": "npm run test -- --watch",
     "start": "node server.js",
     "start:watch": "nodemon server.js",
+    "create-tables": "node lib/services/create-tables.js",
+    "drop-tables": "node lib/services/drop-tables.js",
     "seed": "node lib/services/seedData.js",
+    "setup-db": "npm run drop-tables && npm run create-tables && node lib/services/seed-data.js",
     "heroku-postbuild": "npm install --production"
   },
   "repository": {
