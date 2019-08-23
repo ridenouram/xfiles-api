@@ -14,3 +14,15 @@ CREATE TABLE CHARACTER (
   PRIMARY KEY (id)
 );
 
+
+  name,
+  gender,
+  status,
+  born, 
+  occupation,
+  rank,
+  affiliations,
+  portrayedBy,
+  image,
+  description,
+  categories
