@@ -11,7 +11,7 @@
     "create-tables": "node lib/services/create-tables.js",
     "drop-tables": "node lib/services/drop-tables.js",
     "seed": "node lib/services/seed-data.js",
-    "setup-db": "npm run drop-tables && npm run create-tables && node lib/services/seed-data.js",
+    "setup-db": "npm run drop-tables && npm run create-tables && npm run seed",
     "heroku-postbuild": "npm install --production"
   },
   "repository": {
