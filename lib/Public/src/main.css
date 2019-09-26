@@ -1,0 +1,78 @@
+@font-face {
+  font-family: Industria;
+  src: url(../assets/Industria_Solid.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+header {
+  background: black;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  height: 300px;
+}
+
+#title {
+
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  font-family: Industria;
+  letter-spacing: 1em;
+  font-size: 1.5em;
+}
+
+#logo > * {
+  margin: 20px;
+}
+
+.column {
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border: 2px solid red;
+}
+
+#the {
+  margin-right: -.1em;
+}
+
+.number-circle {
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  padding: 4px;
+  border: 2px solid red;
+  text-align: center;
+  letter-spacing: 0;
+  font-size: 1.5em;
+}
+
+#logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%
+}
+
+#sublogo {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-family: Industria;
+  font-size: 1em;
+  transform: scale(1, 1.5);
+  letter-spacing: .4em;
+}
