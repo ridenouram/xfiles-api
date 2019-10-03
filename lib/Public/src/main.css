@@ -119,9 +119,10 @@ main {
   border: white 2px solid;
   border-radius: 15px;
   color: white;
-  font-family: Industria;
-  font-size: 1.5em;
-  letter-spacing: .05em;
+  font-family: 'Work Sans', sans-serif;
+  // font-family: Industria;
+  // letter-spacing: .05em;
+  font-size: 1.2em;
   margin: 30px;
   padding: 20px;
   background: rgb(255, 255, 255, 0.1);
