@@ -116,15 +116,26 @@ header {
 }
 
 main {
+  border: white 2px solid;
+  border-radius: 15px;
   color: white;
   font-family: Industria;
   font-size: 1.5em;
   letter-spacing: .05em;
   margin: 30px;
+  padding: 20px;
+  background: rgb(255, 255, 255, 0.1);
+  // background: rgb(40, 53, 50, 0.6)
 }
 
 main * {
   margin: 3px;
+}
+
+main hr {
+  // color: white;
+  border-top: 1px solid white;
+  margin-top: 10px;
 }
 
 footer {
