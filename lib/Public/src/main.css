@@ -1,0 +1,167 @@
+@font-face {
+  font-family: Industria;
+  src: url(../assets/Industria_Solid.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: radial-gradient(rgb(105, 138, 131), black);
+}
+
+header {
+  background: black;
+  color: white;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 300px;
+}
+
+#navigation {
+  // width: 1em;
+  display: flex;
+  padding: 20px;
+  justify-content: space-evenly;
+  font-family: Industria;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+}
+
+#navigation a {
+  height: 1.5em;
+}
+
+#navigation a:hover {
+  color: red;
+}
+
+#title {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  font-family: Industria;
+  letter-spacing: 1em;
+  font-size: 1.5em;
+}
+
+#logo > * {
+  margin: 20px;
+}
+
+.column {
+  margin: 10px;
+  // border: 2px solid blue;
+}
+
+#the {
+  margin-right: -.1em;
+}
+
+#files {
+  margin-right: -.1em;
+}
+
+.number-circle {
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  padding: 4px;
+  border: 2px solid red;
+  text-align: center;
+  letter-spacing: 0;
+  font-size: 1.5em;
+}
+
+#logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sublogo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-family: Industria;
+  font-size: 1em;
+  transform: scale(1, 1.5);
+  letter-spacing: .4em;
+  margin-top: -25px;
+  margin-right: 30px;
+}
+
+#github {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#github img {
+    margin-right: 3em; 
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    height: 2em;
+    margin-top: -.5em;
+}
+
+main {
+  border: white 2px solid;
+  border-radius: 15px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  margin: 30px;
+  padding: 20px;
+  background: rgb(255, 255, 255, 0.1);
+}
+
+main * {
+  margin: 3px;
+}
+
+main hr {
+  border-top: 1px solid white;
+  margin-top: 10px;
+}
+
+main h2 {
+  font-family: Industria;
+  font-size: 2.5em;
+  letter-spacing: .2em;
+}
+main h3 {
+  background-color: black;
+  padding: 5px;
+  width: 30%;
+}
+
+footer {
+  background: black;
+  color: white;
+  font-family: Industria;
+  letter-spacing: .1em;
+  padding: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+footer a:hover {
+  color: red;
+}

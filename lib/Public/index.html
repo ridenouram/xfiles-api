@@ -4,28 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="src/main.css">
   <title>X-Files API</title>
 </head>
 <body>
-  <h1>Welcome to the X-Files Character API </h1>
-   <p> Landing page and documentation are coming soon</p>
-   <br> <br> 
-   <h2>Endpoints</h2>
-   <h3>/api/v1/characters</h3>
-   <p>Gets a list of characters. Without any query options, returns all characters in one array. Query options include page, perPage, and category</p>
-   <ul>Categories include: </ul>
+  <header>
+    <div id="navigation" class="column">
+      <a>Home</a>
+      <a>Documentation</a>
+      <a>About</a>
+    </div>
+    <div id="title" class="column">
+      <span id="logo-container">
+        <div id="logo">
+          <h1 id="the">THE</h1>
+          <div class="number-circle">
+            <h1>X</h1>
+          </div>
+          <h1 id="files">FILES</h1>
+        </div>
+        <div id="sublogo">
+          <h2>Character API</h2>
+        </div>
+      </span>
+    </div>
+    <div id="github" class="column">
+      <a href="https://github.com/ridenouram/xfiles-api">
+        <img src="assets/github-logo.png">
+      </a>
+    </div>
+  </header>
+  <main>
+    <p> **Documentation Currently Under Construction**</p>
+    <br> 
+    <h2>ENDPOINTS</h2>
+    <hr>
+    <br>
+    <h3>/api/v1/characters</h3>
+    <p>Gets a list of characters. Without any query options, returns all characters in one array. Query options include page, perPage, and category</p>
+    <br>
+    <ul>Categories include:</ul>
       <li>Monster of the Week</li>
       <li>Main characters</li>
       <li>Syndicate</li>
       <li>Informants</li>
       <li>FBI personnel</li>
       <li>Deceased people</li>
+    <br>
+    <h3>/api/v1/characters/:name</h3>
+    <p>Returns a character by name</p>
+    <br>
+  </main>
+  <footer>
+      <a href="https://www.linkedin.com/in/anna-ridenour/">Created by Anna Ridenour</a>
+  </footer>
 </body>
-<br>
-<h3>/api/v1/characters/:name</h3>
-<p>Returns a character by name</p>
-<br><br>
-<h2>Created by Anna Ridenour</h2>
-<a href="https://github.com/ridenouram/xfiles-api">Github</a>
-<a href="https://www.linkedin.com/in/anna-ridenour/">LinkedIn</a>
+
 </html>

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --runInBand",
+    "test": "jest --verbose --runInBand  --forceExit",
     "test:watch": "npm run test -- --watch",
     "start": "node server.js",
     "start:watch": "nodemon server.js",
@@ -12,6 +12,7 @@
     "drop-tables": "node lib/services/drop-tables.js",
     "seed": "node lib/services/seed-data.js",
     "setup-db": "npm run drop-tables && npm run create-tables && npm run seed",
+    "get-character": "node lib/services/character-page.js",
     "heroku-postbuild": "npm install --production"
   },
   "repository": {
