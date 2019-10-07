@@ -119,10 +119,10 @@ main {
   border: white 2px solid;
   border-radius: 15px;
   color: white;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Barlow', sans-serif;
   // font-family: Industria;
   // letter-spacing: .05em;
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 30px;
   padding: 20px;
   background: rgb(255, 255, 255, 0.1);
@@ -137,6 +137,12 @@ main hr {
   // color: white;
   border-top: 1px solid white;
   margin-top: 10px;
+}
+
+main h3 {
+  background-color: black;
+  padding: 5px;
+  width: 20%;
 }
 
 footer {
