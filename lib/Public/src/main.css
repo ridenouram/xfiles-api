@@ -119,7 +119,7 @@ main {
   border: white 2px solid;
   border-radius: 15px;
   color: white;
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   // font-family: Industria;
   // letter-spacing: .05em;
   font-size: 1em;
@@ -139,10 +139,15 @@ main hr {
   margin-top: 10px;
 }
 
+main h2 {
+  font-family: Industria;
+  font-size: 2.5em;
+  letter-spacing: .2em;
+}
 main h3 {
   background-color: black;
   padding: 5px;
-  width: 20%;
+  width: 30%;
 }
 
 footer {
