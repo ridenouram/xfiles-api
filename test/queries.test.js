@@ -2,13 +2,13 @@ const app = require('../lib/app');
 const request = require('supertest');
 const { pool } = require('../lib/utils/connect');
 
-beforeAll(() => {
-  pool.connect();
-});
+// beforeAll(() => {
+//   pool.connect();
+// });
 
-afterAll(() => {
-  pool.end();
-});
+// afterAll(() => {
+//   pool.end();``
+// });
 
 describe('routes', () => {
   it('gets all characters', () => {
