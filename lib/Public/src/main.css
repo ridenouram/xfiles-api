@@ -144,6 +144,7 @@ main h3 {
   background-color: black;
   padding: 5px;
   width: 30%;
+  border: 2px solid grey;
 }
 
 footer {
@@ -164,4 +165,9 @@ footer a {
 
 footer a:hover {
   color: red;
+}
+
+.example {
+  background: black;
+  color: white;
 }
